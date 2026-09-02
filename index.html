@@ -4,11 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <title>Cadastro de Endereço</title>
 </head>
 <body>
     <h1>Buscando informação no servidor via json:</h1>
     <button type="button" onclick="chama_back()">chamar back-end</button>
     <p id="resposta">clique no botão para carregar</p>
+   <h2>Cadastro de Endereço</h2>
+    <p>Preencha os campos abaixo para cadastrar o seu endereço.</p>
+
+    <form id="form-endereco">
+        <!-- Tabela simples para alinhar as etiquetas e os campos -->
+        <table border="0" cellpadding="5">
+            <thead>
+                <tr>
+                    <th align="left">Campo</th>
+                    <th align="left">Preenchimento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="cep">CEP:</label></td>
+                    <td><input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9" required></td>
+                </tr>
+                <tr>
+                    <td><label for="rua">Rua / Avenida:</label></td>
+                    <td><input type="text" id="rua" name="rua" placeholder="Ex: Rua das Flores" required></td>
+                </tr>
+                <tr>
+                    <td><label for="numero">Número:</label></td>
+                    <td><input type="text" id="numero" name="numero" placeholder="123" required></td>
+                </tr>
+                <tr>
+                    <td><label for="complemento">Complemento:</label></td>
+                    <td><input type="text" id="complemento" name="complemento" placeholder="Ex: Apto 42"></td>
+                </tr>
+                <tr>
+                    <td><label for="bairro">Bairro:</label></td>
+                    <td><input type="text" id="bairro" name="bairro" placeholder="Ex: Centro" required></td>
+                </tr>
+                <tr>
+                    <td><label for="cidade">Cidade:</label></td>
+                    <td><input type="text" id="cidade" name="cidade" placeholder="Ex: São Paulo" required></td>
+                </tr>
+                <tr>
+                    <td><label for="estado">Estado:</label></td>
+                    <td>
+                        <select id="estado" name="estado" required>
+                            <option value="" disabled selected>Selecione a UF</option>
+                            <option value="AC">AC</option> <option value="AL">AL</option>
+                            <option value="AP">AP</option> <option value="AM">AM</option>
+                            <option value="BA">BA</option> <option value="CE">CE</option>
+                            <option value="DF">DF</option> <option value="ES">ES</option>
+                            <option value="GO">GO</option> <option value="MA">MA</option>
+                            <option value="MT">MT</option> <option value="MS">MS</option>
+                            <option value="MG">MG</option> <option value="PA">PA</option>
+                            <option value="PB">PB</option> <option value="PR">PR</option>
+                            <option value="PE">PE</option> <option value="PI">PI</option>
+                            <option value="RJ">RJ</option> <option value="RN">RN</option>
+                            <option value="RS">RS</option> <option value="RO">RO</option>
+                            <option value="RR">RR</option> <option value="SC">SC</option>
+                            <option value="SP">SP</option> <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Salvar Endereço</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
 </body>
 </html>
